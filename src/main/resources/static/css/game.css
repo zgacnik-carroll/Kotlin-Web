@@ -99,15 +99,15 @@ body, html {
     z-index: 2;  /* below owl */
 }
 
-/* Owl */
 #owl {
     position: absolute;
+    left: 0;
+    bottom: 0;
     width: 80px;
-    height: auto;
     cursor: pointer;
-    z-index: 5;  /* above trees */
+    z-index: 5;
     opacity: 0.9;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: left 0.4s linear, bottom 0.4s linear;
 }
 
 #owl:hover {

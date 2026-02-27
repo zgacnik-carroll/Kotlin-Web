@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", resize);
     resize();
 
-    /* Stars */
+    /* ⭐ Stars */
     for (let i = 0; i < 100; i++) {
         stars.push({
             x: Math.random() * width,
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* Movement */
+    /* ⭐ Movement */
     let playerX = 0;
     let velocity = 0;
     const speed = 4.5;
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("keydown", e => (keys[e.key] = true));
     window.addEventListener("keyup", e => (keys[e.key] = false));
 
-    /* Front tree generation */
+    /* ⭐ Front tree generation */
     const treeCount = 10;
     const minSpacing = 150;
     const maxSpacing = 400;
@@ -63,12 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
         treesFrontContainer.appendChild(tree);
     }
 
-    /* Owl random spawn */
-    const owlX = Math.random() * (world.offsetWidth - 80);
-    owl.style.left = `${owlX}px`;
+    const WORLD_WIDTH = 4000;
+    let owlMoving = true;
 
-    const owlBottom = 20 + Math.random() * 40;
-    owl.style.bottom = `${owlBottom}%`;
+    function moveOwlRandomly() {
+        if (!owlMoving) return;
+
+        const owlWidth = owl.offsetWidth || 80;
+
+        const newX = Math.random() * (WORLD_WIDTH - owlWidth);
+        const newBottom = 20 + Math.random() * 40;
+
+        owl.style.left = newX + "px";
+        owl.style.bottom = newBottom + "%";
+    }
+
+    moveOwlRandomly();
+    const owlTimer = setInterval(moveOwlRandomly, 2000);
 
     function updateMovement() {
         if (keys["a"] || keys["ArrowLeft"]) velocity = -speed;
@@ -84,8 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
         treesFrontContainer.style.transform = `translate3d(${-playerX * 1.1}px,0,0)`;
     }
 
+    /* ⭐ Owl click = stop movement + end game */
     owl.addEventListener("click", () => {
+        owlMoving = false;
+        clearInterval(owlTimer);
+
         encounter.classList.remove("hidden");
+
         owl.style.transform = "scale(1.2)";
         setTimeout(() => { owl.style.transform = "scale(1)"; }, 500);
     });
