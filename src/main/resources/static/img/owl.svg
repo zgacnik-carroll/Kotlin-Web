@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Body -->
+  <ellipse cx="100" cy="110" rx="60" ry="80" fill="#DDD"></ellipse>
+
+  <!-- Head -->
+  <circle cx="100" cy="60" r="50" fill="#EEE"></circle>
+
+  <!-- Eyes -->
+  <circle cx="80" cy="55" r="12" fill="#222"></circle>
+  <circle cx="120" cy="55" r="12" fill="#222"></circle>
+
+  <circle cx="80" cy="55" r="6" fill="#FFF"></circle>
+  <circle cx="120" cy="55" r="6" fill="#FFF"></circle>
+
+  <!-- Beak -->
+  <polygon points="95,70 105,70 100,85" fill="#333"></polygon>
+
+  <!-- Wings -->
+  <path d="M40,110 Q20,150 60,150 Q40,130 40,110" fill="#C8C8C8"></path>
+  <path d="M160,110 Q180,150 140,150 Q160,130 160,110" fill="#C8C8C8"></path>
+
+  <!-- Feet (very simple) -->
+  <rect x="85" y="160" width="10" height="15" fill="#333"></rect>
+  <rect x="105" y="160" width="10" height="15" fill="#333"></rect>
+</svg>

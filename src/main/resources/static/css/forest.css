@@ -1,0 +1,129 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #0b1020;
+    font-family: system-ui;
+}
+
+/* Scene wrapper */
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Atmosphere */
+#atmosphere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* World container */
+#world {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 4000px;
+    height: 100%;
+}
+
+/* Sky */
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 20%, #1a2340, #050812 70%);
+}
+
+/* Moon */
+.moon {
+    position: absolute;
+    top: 60px;
+    right: 120px;
+    width: 80px;
+    height: 80px;
+    background: #e5ecff;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(200,220,255,0.7);
+}
+
+/* Trees */
+.trees {
+    position: absolute;
+    bottom: 0;
+    width: 4000px;
+    height: 100%;
+    pointer-events: none;
+    background-repeat: repeat-x;
+    image-rendering: crisp-edges;
+    transform-origin: bottom;
+}
+
+.trees.far { transform: scaleY(0.6); opacity: 0.4; background-image: url("/img/trees_far.svg"); }
+.trees.mid { transform: scaleY(0.7); opacity: 0.7; background-image: url("/img/trees_mid.svg"); }
+.trees.front { transform: scaleY(0.85); background-image: url("/img/trees_front.svg"); }
+
+/* Owl SVG */
+#owl {
+    position: absolute;
+    bottom: 10%;
+    left: 1800px;
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#owl:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #e5ecff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Encounter popup */
+.encounter {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10,15,30,0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ground strip */
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #000;
+    z-index: 10;
+}

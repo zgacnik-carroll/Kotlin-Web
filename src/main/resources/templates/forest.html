@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Spirit of the Night</title>
+  <link rel="stylesheet" th:href="@{/css/forest.css}">
+</head>
+<body>
+
+<div class="scene">
+
+  <!-- Atmosphere canvas for stars -->
+  <canvas id="atmosphere"></canvas>
+
+  <div id="world">
+    <div class="sky">
+      <div class="moon"></div>
+    </div>
+
+    <div class="trees far"></div>
+    <div class="trees mid"></div>
+    <div class="trees front"></div>
+
+    <!-- Owl perched in front layer -->
+    <img id="owl" src="/img/owl.svg" alt="White Owl">
+  </div>
+
+  <!-- Ground strip -->
+  <div class="ground"></div>
+
+  <!-- Overlay -->
+  <div class="overlay">
+    <h1>Spirit of the Night</h1>
+    <p class="subtitle">Explore and spot the owl — A/D or Arrow Keys</p>
+    <p class="weather">Weather: <span th:text="${weather}"></span></p>
+  </div>
+
+  <!-- Encounter -->
+  <div id="encounter" class="encounter hidden">
+    <h2>You spotted a Great Gray Owl</h2>
+    <p>The Great Gray Owl can detect prey beneath snow using sound alone.</p>
+  </div>
+
+</div>
+
+<script th:src="@{/js/forest.js}"></script>
+</body>
+</html>
