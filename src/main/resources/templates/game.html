@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <title>Spirit of the Night</title>
-  <link rel="stylesheet" th:href="@{/css/forest.css}">
+  <link rel="stylesheet" th:href="@{/css/game.css}">
 </head>
 <body>
 
@@ -31,7 +31,6 @@
   <div class="overlay">
     <h1>Spirit of the Night</h1>
     <p class="subtitle">Explore and spot the owl — A/D or Arrow Keys</p>
-    <p class="weather">Weather: <span th:text="${weather}"></span></p>
   </div>
 
   <!-- Encounter -->
@@ -42,6 +41,6 @@
 
 </div>
 
-<script th:src="@{/js/forest.js}"></script>
+<script th:src="@{/js/game.js}"></script>
 </body>
 </html>

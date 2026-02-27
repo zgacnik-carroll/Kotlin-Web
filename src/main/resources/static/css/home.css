@@ -1,0 +1,39 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b1020;
+    color: #e5ecff;
+    font-family: system-ui;
+    text-align: center;
+}
+
+.home-container h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+button#startBtn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #1a2340;
+    color: #e5ecff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button#startBtn:hover {
+    background-color: #2a3455;
+    transform: scale(1.05);
+}
