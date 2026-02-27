@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             y: Math.random() * height,
             r: Math.random() * 1.5,
             phase: Math.random() * Math.PI * 2,
-            speed: 0.01 + Math.random() * 0.02
+            speed: 0.01 + Math.random() * 0.05
         });
     }
 
