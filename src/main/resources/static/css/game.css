@@ -131,11 +131,12 @@ body, html {
 
 /* Encounter popup */
 .encounter {
+    color: white;
     position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(10,15,30,0.8);
+    background: rgba(10,15,30,0.5);
     padding: 20px 40px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
