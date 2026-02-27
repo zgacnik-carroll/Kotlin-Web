@@ -109,4 +109,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     animate();
+
+    const restartBtn = document.querySelector(".restartBtn");
+    const quitBtn = document.querySelector(".quitBtn");
+
+    restartBtn.addEventListener("click", () => {
+        location.reload();
+    });
+
+    quitBtn.addEventListener("click", () => {
+        window.location.href = "/";
+    });
+
 });
