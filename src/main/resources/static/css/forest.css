@@ -15,15 +15,15 @@ body, html {
     overflow: hidden;
 }
 
-/* Atmosphere */
+/* Atmosphere canvas (stars) */
 #atmosphere {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    pointer-events: none;
+    z-index: 1;           /* behind trees and ground */
+    pointer-events: none;  /* so it doesn’t block clicks */
 }
 
 /* World container */
@@ -62,24 +62,50 @@ body, html {
     width: 4000px;
     height: 100%;
     pointer-events: none;
-    background-repeat: repeat-x;
-    image-rendering: crisp-edges;
     transform-origin: bottom;
 }
 
-.trees.far { transform: scaleY(0.6); opacity: 0.4; background-image: url("/img/trees_far.svg"); }
-.trees.mid { transform: scaleY(0.7); opacity: 0.7; background-image: url("/img/trees_mid.svg"); }
-.trees.front { transform: scaleY(0.85); background-image: url("/img/trees_front.svg"); }
+.trees.far {
+    transform: scaleY(0.6);
+    opacity: 0.4;
+    background-image: url("/img/trees_far.svg");
+    background-repeat: repeat-x;
+    image-rendering: crisp-edges;
+}
+.trees.mid {
+    transform: scaleY(0.7);
+    opacity: 0.7;
+    background-image: url("/img/trees_mid.svg");
+    background-repeat: repeat-x;
+    image-rendering: crisp-edges;
+}
 
-/* Owl SVG */
+/* Front trees container now holds dynamic <img> trees */
+.trees.front {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Individual front trees */
+.trees.front img.tree {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    height: auto;
+    pointer-events: none;
+    z-index: 2;  /* below owl */
+}
+
+/* Owl */
 #owl {
     position: absolute;
-    bottom: 10%;
-    left: 1800px;
     width: 80px;
     height: auto;
     cursor: pointer;
-    z-index: 5;
+    z-index: 5;  /* above trees */
     opacity: 0.9;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -87,6 +113,11 @@ body, html {
 #owl:hover {
     transform: scale(1.1);
     opacity: 1;
+}
+
+#owl.visible {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #fff);
 }
 
 /* Overlay */
@@ -117,13 +148,13 @@ body, html {
     pointer-events: none;
 }
 
-/* Ground strip */
+/* Ground strip at bottom */
 .ground {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 80px;        /* adjust thickness */
     background: #000;
-    z-index: 10;
+    z-index: 10;          /* above trees but below overlay */
 }
