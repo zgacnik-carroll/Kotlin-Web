@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b1020;
+    color: #e5ecff;
+    font-family: system-ui;
+    text-align: center;
+}
+
+.goodbyeText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

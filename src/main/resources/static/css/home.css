@@ -46,3 +46,19 @@ button#startBtn:hover {
     background-color: #2a3455;
     transform: scale(1.05);
 }
+
+button.endBtn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #1a2340;
+    color: #e5ecff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.endBtn:hover {
+    background-color: #2a3455;
+    transform: scale(1.05);
+}
