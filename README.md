@@ -34,6 +34,7 @@ title screen that gives a quick set of instructions on how to play the game:
 
 1. Clone this GitHub repository into your desired directory.
 2. Navigate to your desired directory, then navigate to the cloned repository and run the following command:
+
    ```bash
    ./gradlew bootRun
    ```
