@@ -1,3 +1,4 @@
+/* Reset and base styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -12,25 +13,30 @@ body, html {
     text-align: center;
 }
 
+/* Container for home content */
 .home-container {
     margin-bottom: 4rem;
 }
 
+/* Main heading */
 .home-container h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
+/* Paragraph text */
 .home-container p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
+/* Owl image container */
 .home-owl {
     margin: 0 auto;
     padding-bottom: 6%;
 }
 
+/* Start button styles */
 button#startBtn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
@@ -47,6 +53,7 @@ button#startBtn:hover {
     transform: scale(1.05);
 }
 
+/* End button styles */
 button.endBtn {
     padding: 1rem 2rem;
     font-size: 1.2rem;

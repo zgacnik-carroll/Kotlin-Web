@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Owl Catcher</title>
+    <!-- Link to home page CSS -->
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
 
+<!-- Main container for the home page -->
 <div class="home-container">
+
+    <!-- Game title -->
     <h1>Owl Catcher</h1>
-    <p>Explore the forest and catch the owl:</p>
-    <div class="home-owl">
-        <img src="/img/owl.svg" alt="White Owl">
-    </div>
-    <p>Use the A and D keys (or the arrow keys) to move left and right respectively.</p>
-    <p>Once you see the owl, click on it to win the game. Be quick, the owl moves fast!</p>
-    <button id="startBtn">Start Game</button>
-    <button class="endBtn">End Program</button>
+
+    <!-- Instructions section -->
+    <section class="instructions">
+        <p>Explore the forest and catch the owl:</p>
+
+        <!-- Owl image for visual appeal -->
+        <div class="home-owl">
+            <img src="/img/owl.svg" alt="White Owl">
+        </div>
+
+        <!-- Movement instructions -->
+        <p>Use the A and D keys (or the arrow keys) to move left and right respectively.</p>
+        <p>Once you see the owl, click on it to win the game. Be quick, the owl moves fast!</p>
+    </section>
+
+    <!-- Action buttons -->
+    <section class="home-buttons">
+        <button id="startBtn">Start Game</button>
+        <button class="endBtn">End Program</button>
+    </section>
+
 </div>
 
+<!-- Link to home page JavaScript -->
 <script th:src="@{/js/home.js}"></script>
 </body>
 </html>

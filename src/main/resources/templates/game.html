@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Owl Catcher</title>
+  <!-- Link to main game CSS -->
   <link rel="stylesheet" th:href="@{/css/game.css}">
 </head>
 <body>
 
+<!-- Main game scene container -->
 <div class="scene">
 
-  <!-- Atmosphere canvas for stars -->
+  <!-- Canvas layer for atmosphere and stars -->
   <canvas id="atmosphere"></canvas>
 
+  <!-- World container holding sky, trees, and owl -->
   <div id="world">
+
+    <!-- Sky background layer -->
     <div class="sky">
       <div class="moon"></div>
     </div>
 
-    <div class="trees far"></div>
-    <div class="trees mid"></div>
-    <div class="trees front"></div>
+    <!-- Parallax tree layers -->
+    <div class="trees far"></div>    <!-- Background trees -->
+    <div class="trees mid"></div>    <!-- Middle-ground trees -->
+    <div class="trees front"></div>  <!-- Foreground trees (dynamic <img> elements) -->
 
-    <!-- Owl perched in front layer -->
+    <!-- Owl sprite in the foreground -->
     <img id="owl" src="/img/owl.svg" alt="White Owl">
+
   </div>
 
-  <!-- Ground strip -->
+  <!-- Ground strip at bottom of the scene -->
   <div class="ground"></div>
 
-  <!-- Encounter -->
+  <!-- Encounter popup triggered when player clicks the owl -->
   <div id="encounter" class="encounter hidden">
     <h2>You caught the owl!</h2>
     <p>Restart or quit the game below.</p>
@@ -39,6 +47,8 @@
 
 </div>
 
+<!-- Main game JavaScript -->
 <script th:src="@{/js/game.js}"></script>
+
 </body>
 </html>
