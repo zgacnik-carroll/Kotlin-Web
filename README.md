@@ -56,7 +56,7 @@ This program includes many stylistic front-end features listed below:
 - Animated starfield with twinkling effect
 - Canvas-based rendering
 - Smooth horizontal camera movement
-- Scalable Vector Graphics (SVG)
+- Scalable Vector Graphics (SVGs)
 
 Of these features, the most creative (and my personal favorite)
 is the use of dynamically created stars that twinkle in the background of the game.
