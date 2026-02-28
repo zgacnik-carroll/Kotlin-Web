@@ -91,7 +91,7 @@ improvements I would like to make on this project:
 - Timer scoring system
   - Incorporating a timer that tracks how long it takes a user to find and click the owl, as well as an in-memory H2 database that tracks highscores
 - Difficulty scaling
-  - Allow for difficulty selection on the home page that determines how long the owl stays in one spot for
+  - Allow for difficulty selection on the home page that determines how long the owl stays in one spot before moving
 - Sound effects
   - Adding nighttime forest sounds (owls hooting, leaves blowing in the wind, fireflies buzzing, etc.)
 
@@ -101,5 +101,7 @@ improvements I would like to make on this project:
 
 Owl Catcher was created to strengthen my understanding of Kotlin,
 Spring Boot, and web-based application development.
-It combines backend logic with dynamic front end rendering
-to create an immersive browser experience. Have fun playing Owl Catcher!
+It combines back-end logic with dynamic front-end rendering
+to create an immersive forest game experience.
+
+Have fun playing Owl Catcher!
