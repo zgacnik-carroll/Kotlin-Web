@@ -40,26 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("keydown", e => (keys[e.key] = true));
     window.addEventListener("keyup", e => (keys[e.key] = false));
 
-    const treeCount = 10;
-    const minSpacing = 150;
-    const maxSpacing = 400;
-    let currentX = 50;
-
-    for (let i = 0; i < treeCount; i++) {
-        const treeX = currentX + minSpacing + Math.random() * (maxSpacing - minSpacing);
-        currentX = treeX;
-
-        const tree = document.createElement("img");
-        tree.src = "/img/tree_front.svg";
-        tree.classList.add("tree");
-        tree.style.left = `${treeX}px`;
-
-        const scale = 0.8 + Math.random() * 0.4;
-        tree.style.transform = `scaleY(${scale})`;
-
-        treesFrontContainer.appendChild(tree);
-    }
-
     const WORLD_WIDTH = 4000;
     let owlMoving = true;
 
