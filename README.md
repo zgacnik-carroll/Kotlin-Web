@@ -6,7 +6,7 @@
 
 Owl Catcher is a web application game written in Kotlin. The user
 is presented with a dark, starry, moonlit forest scene where the objective
-of the game is to find an owl flying around in the forest scene.
+of the game is to find an owl flying around in the forest.
 
 ---
 
